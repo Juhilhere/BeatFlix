@@ -5,6 +5,8 @@ import "./HomeCategories.css";
 
 const HomeCategories = ({ onSelectSong }) => {
   const [categories, setCategories] = useState({
+    hollywoodTopArtists: [],
+    bollywoodTopArtists: [],
     trending: [],
     allTimeBest: [],
     dailyMix: [],
@@ -17,6 +19,12 @@ const HomeCategories = ({ onSelectSong }) => {
   useEffect(() => {
     const fetchCategorySongs = async () => {
       try {
+        const hollywoodTopArtists = await axios.get(
+          "https://saavn.dev/api/search/songs?query=taylor swift ed sheeran justin bieber"
+        );
+        const bollywoodTopArtists = await axios.get(
+          "https://saavn.dev/api/search/songs?query=arijit singh shreya ghoshal"
+        );
         const trending = await axios.get(
           "https://saavn.dev/api/search/songs?query=trending"
         );
@@ -34,6 +42,14 @@ const HomeCategories = ({ onSelectSong }) => {
         );
 
         setCategories({
+          hollywoodTopArtists: hollywoodTopArtists.data.data.results.slice(
+            0,
+            10
+          ),
+          bollywoodTopArtists: bollywoodTopArtists.data.data.results.slice(
+            0,
+            10
+          ),
           trending: trending.data.data.results.slice(0, 10),
           allTimeBest: allTimeBest.data.data.results.slice(0, 10),
           dailyMix: dailyMix.data.data.results.slice(0, 10),
@@ -71,6 +87,14 @@ const HomeCategories = ({ onSelectSong }) => {
 
   return (
     <div className="home-categories">
+      <CategorySection
+        title="Top Hollywood Artists"
+        songs={categories.hollywoodTopArtists}
+      />
+      <CategorySection
+        title="Top Bollywood Artists"
+        songs={categories.bollywoodTopArtists}
+      />
       <CategorySection title="Trending Songs" songs={categories.trending} />
       <CategorySection title="All Time Best" songs={categories.allTimeBest} />
       <CategorySection title="Daily Mix" songs={categories.dailyMix} />
