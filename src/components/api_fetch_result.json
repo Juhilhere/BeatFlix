@@ -1,0 +1,2589 @@
+{
+    "success": true,
+    "data": {
+      "total": 1040,
+      "start": -9,
+      "results": [
+        {
+          "id": "rjkrTnma",
+          "name": "Kesariya",
+          "type": "song",
+          "year": "2022",
+          "releaseDate": null,
+          "duration": 268,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 197894621,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya/AgIAQyBeWlI",
+          "copyright": "(P) 2022 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "38845390",
+            "name": "Brahmastra (Original Motion Picture Soundtrack)",
+            "url": "https://www.jiosaavn.com/album/brahmastra-original-motion-picture-soundtrack/xq4v9ZFC9iA_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "12841161",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/ES25qtjiVmo_"
+              },
+              {
+                "id": "",
+                "name": "Arijit Singh &amp; Amitabh Bhattacharya",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-amitabh-bhattacharya-songs/"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              },
+              {
+                "id": "456117",
+                "name": "Amitabh Bachchan",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bachchan-songs/X6Dce0iJ7y0_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/871/c2febd353f3a076a406fa37510f31f9f_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/871/c2febd353f3a076a406fa37510f31f9f_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/871/c2febd353f3a076a406fa37510f31f9f_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/871/c2febd353f3a076a406fa37510f31f9f_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/871/c2febd353f3a076a406fa37510f31f9f_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "p-IVNEqy",
+          "name": "Kesariya (Dance Mix)",
+          "type": "song",
+          "year": "2022",
+          "releaseDate": null,
+          "duration": 197,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 3229533,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-dance-mix/AEUiZzp1Rko",
+          "copyright": "(P) 2022 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "38845390",
+            "name": "Brahmastra (Original Motion Picture Soundtrack)",
+            "url": "https://www.jiosaavn.com/album/brahmastra-original-motion-picture-soundtrack/xq4v9ZFC9iA_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "909299",
+                "name": "Shashwat Singh",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Shashwat_Singh_003_20241223092611_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Shashwat_Singh_003_20241223092611_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Shashwat_Singh_003_20241223092611_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/shashwat-singh-songs/gJthH4uEIuI_"
+              },
+              {
+                "id": "458926",
+                "name": "Antara Mitra",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Antara_Mitra_001_20240601080241_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Antara_Mitra_001_20240601080241_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Antara_Mitra_001_20240601080241_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/antara-mitra-songs/UvjR1-6wTLk_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "909299",
+                "name": "Shashwat Singh",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Shashwat_Singh_003_20241223092611_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Shashwat_Singh_003_20241223092611_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Shashwat_Singh_003_20241223092611_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/shashwat-singh-songs/gJthH4uEIuI_"
+              },
+              {
+                "id": "458926",
+                "name": "Antara Mitra",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Antara_Mitra_001_20240601080241_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Antara_Mitra_001_20240601080241_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Antara_Mitra_001_20240601080241_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/antara-mitra-songs/UvjR1-6wTLk_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "14251124",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/MgYTBAPUGJg_"
+              },
+              {
+                "id": "",
+                "name": "Shashwat Singh",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/shashwat-singh-songs/"
+              },
+              {
+                "id": "",
+                "name": "Antara Mitra &amp; Arijit Singh",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/antara-mitra-arijit-singh-songs/"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              },
+              {
+                "id": "456117",
+                "name": "Amitabh Bachchan",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bachchan-songs/X6Dce0iJ7y0_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/871/bbffe84366457bafca23f5c8a32901a7_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/871/bbffe84366457bafca23f5c8a32901a7_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/871/bbffe84366457bafca23f5c8a32901a7_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/871/bbffe84366457bafca23f5c8a32901a7_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/871/bbffe84366457bafca23f5c8a32901a7_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "7I9urT8B",
+          "name": "Kesariya (Lofi Flip)",
+          "type": "song",
+          "year": "2022",
+          "releaseDate": null,
+          "duration": 240,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 1720521,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-lofi-flip/RyFSRAZkD3E",
+          "copyright": "(P) 2022 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "37490205",
+            "name": "Kesariya (Lofi Flip)",
+            "url": "https://www.jiosaavn.com/album/kesariya-lofi-flip/Oi120RPXw-E_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "5696297",
+                "name": "VIBIE",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Vibie_001_20220415165537_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Vibie_001_20220415165537_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Vibie_001_20220415165537_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/vibie-songs/295bGANLOm8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "9757038",
+                "name": "Bollywood Lofi",
+                "role": "primary_artists",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/bollywood-lofi-songs/A8ydWJT42Hg_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "5696297",
+                "name": "VIBIE",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Vibie_001_20220415165537_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Vibie_001_20220415165537_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Vibie_001_20220415165537_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/vibie-songs/295bGANLOm8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "9757038",
+                "name": "Bollywood Lofi",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/bollywood-lofi-songs/A8ydWJT42Hg_"
+              },
+              {
+                "id": "11187514",
+                "name": "VIBIE",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/vibie-songs/mkAXEJRZ0eo_"
+              },
+              {
+                "id": "",
+                "name": "Arijit Singh &amp; Pritam",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-pritam-songs/"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/611/Kesariya-Lofi-Flip-Hindi-2022-20221004184611-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/611/Kesariya-Lofi-Flip-Hindi-2022-20221004184611-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/611/Kesariya-Lofi-Flip-Hindi-2022-20221004184611-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/611/647de434379ca5fb0edbc3f9715846b6_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/611/647de434379ca5fb0edbc3f9715846b6_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/611/647de434379ca5fb0edbc3f9715846b6_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/611/647de434379ca5fb0edbc3f9715846b6_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/611/647de434379ca5fb0edbc3f9715846b6_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "JNsshlD7",
+          "name": "Kesariya (Instrumental)",
+          "type": "song",
+          "year": "2023",
+          "releaseDate": null,
+          "duration": 222,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 104834,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-instrumental/OiYYQhxccwQ",
+          "copyright": "(P) 2023 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "44061281",
+            "name": "Bollywood Instrumental Hits",
+            "url": "https://www.jiosaavn.com/album/bollywood-instrumental-hits/WZPNHNqs84Q_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "15528190",
+                "name": "Rishi Kumar Instrumentals",
+                "role": "primary_artists",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/rishi-kumar-instrumentals-songs/yd4qQe4DrRw_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "15528190",
+                "name": "Rishi Kumar Instrumentals",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/rishi-kumar-instrumentals-songs/yd4qQe4DrRw_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/571/Bollywood-Instrumental-Hits-Hindi-2023-20230330195915-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/571/Bollywood-Instrumental-Hits-Hindi-2023-20230330195915-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/571/Bollywood-Instrumental-Hits-Hindi-2023-20230330195915-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/571/55bf20f31b21cb9218085f694c59984d_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/571/55bf20f31b21cb9218085f694c59984d_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/571/55bf20f31b21cb9218085f694c59984d_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/571/55bf20f31b21cb9218085f694c59984d_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/571/55bf20f31b21cb9218085f694c59984d_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "_fGUKeDL",
+          "name": "Kesariya (Lost Frequencies Remix)",
+          "type": "song",
+          "year": "2023",
+          "releaseDate": null,
+          "duration": 257,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 85171,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-lost-frequencies-remix/Lw4sZD9Vc38",
+          "copyright": "(P) 2023 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "41561860",
+            "name": "Kesariya (Lost Frequencies Remix)",
+            "url": "https://www.jiosaavn.com/album/kesariya-lost-frequencies-remix/hBY-wU9xdig_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "894700",
+                "name": "Lost Frequencies",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Lost_Frequencies_003_20200616095331_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Lost_Frequencies_003_20200616095331_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Lost_Frequencies_003_20200616095331_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/lost-frequencies-songs/xjo8qDYS-ls_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "894700",
+                "name": "Lost Frequencies",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Lost_Frequencies_003_20200616095331_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Lost_Frequencies_003_20200616095331_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Lost_Frequencies_003_20200616095331_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/lost-frequencies-songs/xjo8qDYS-ls_"
+              },
+              {
+                "id": "15071921",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/AYxig893rIM_"
+              },
+              {
+                "id": "",
+                "name": "Arijit Singh &amp; Lost Frequencies",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-lost-frequencies-songs/"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/672/Kesariya-Lost-Frequencies-Remix-Hindi-2023-20230111144203-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/672/Kesariya-Lost-Frequencies-Remix-Hindi-2023-20230111144203-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/672/Kesariya-Lost-Frequencies-Remix-Hindi-2023-20230111144203-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/672/280fcc8f67b2798a6b949d537ede6061_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/672/280fcc8f67b2798a6b949d537ede6061_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/672/280fcc8f67b2798a6b949d537ede6061_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/672/280fcc8f67b2798a6b949d537ede6061_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/672/280fcc8f67b2798a6b949d537ede6061_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "EbFWakDs",
+          "name": "Kesariya (From &quot;Brahmastra&quot;)",
+          "type": "song",
+          "year": "2022",
+          "releaseDate": null,
+          "duration": 268,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 197894808,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-from-brahmastra/NQotZhVbc0A",
+          "copyright": "(P) 2022 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "36552397",
+            "name": "Kesariya (From &quot;Brahmastra&quot;)",
+            "url": "https://www.jiosaavn.com/album/kesariya-from-brahmastra/3RMVXHzqov8_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "459320",
+                "name": "Arijit Singh",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "12841161",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/ES25qtjiVmo_"
+              },
+              {
+                "id": "",
+                "name": "Arijit Singh &amp; Amitabh Bhattacharya",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/arijit-singh-amitabh-bhattacharya-songs/"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              },
+              {
+                "id": "456117",
+                "name": "Amitabh Bachchan",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bachchan-songs/X6Dce0iJ7y0_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/191/Kesariya-From-Brahmastra-Hindi-2022-20220717092820-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/191/Kesariya-From-Brahmastra-Hindi-2022-20220717092820-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/191/Kesariya-From-Brahmastra-Hindi-2022-20220717092820-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/191/0c353932c6bb495fe0e6e885c42a7367_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/191/0c353932c6bb495fe0e6e885c42a7367_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/191/0c353932c6bb495fe0e6e885c42a7367_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/191/0c353932c6bb495fe0e6e885c42a7367_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/191/0c353932c6bb495fe0e6e885c42a7367_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "0xVIENY1",
+          "name": "Kesariya Rangu",
+          "type": "song",
+          "year": "2022",
+          "releaseDate": null,
+          "duration": 278,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 7145691,
+          "language": "kannada",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-rangu/QBA9eDF,bgI",
+          "copyright": "(P) 2022 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "38843345",
+            "name": "Brahmastra (Kannada) (Original Motion Picture Soundtrack)",
+            "url": "https://www.jiosaavn.com/album/brahmastra-kannada-original-motion-picture-soundtrack/M1of3Ab5aHI_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "3560654",
+                "name": "Sanjith Hegde",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Sanjith_Hegde_002_20230413072406_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Sanjith_Hegde_002_20230413072406_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Sanjith_Hegde_002_20230413072406_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/sanjith-hegde-songs/VuV2sMTbXe8_"
+              },
+              {
+                "id": "689580",
+                "name": "Sid Sriram",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Sid_Sriram_005_20240425180600_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Sid_Sriram_005_20240425180600_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Sid_Sriram_005_20240425180600_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/sid-sriram-songs/634AK8t6tAU_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "3560654",
+                "name": "Sanjith Hegde",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Sanjith_Hegde_002_20230413072406_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Sanjith_Hegde_002_20230413072406_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Sanjith_Hegde_002_20230413072406_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/sanjith-hegde-songs/VuV2sMTbXe8_"
+              },
+              {
+                "id": "689580",
+                "name": "Sid Sriram",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Sid_Sriram_005_20240425180600_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Sid_Sriram_005_20240425180600_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Sid_Sriram_005_20240425180600_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/sid-sriram-songs/634AK8t6tAU_"
+              },
+              {
+                "id": "13608786",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/p,TKtzip5mc_"
+              },
+              {
+                "id": "",
+                "name": "Sanjith Hegde &amp; Sid Sriram",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/sanjith-hegde-sid-sriram-songs/"
+              },
+              {
+                "id": "670705",
+                "name": "Yogaraj Bhat",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Yogaraj_Bhat_003_20230327132032_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Yogaraj_Bhat_003_20230327132032_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Yogaraj_Bhat_003_20230327132032_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/yogaraj-bhat-songs/20Bqtlhs0uM_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              },
+              {
+                "id": "456117",
+                "name": "Amitabh Bachchan",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bachchan-songs/X6Dce0iJ7y0_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/513/Brahmastra-Kannada-Original-Motion-Picture-Soundtrack-Kannada-2022-20221006134239-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/513/Brahmastra-Kannada-Original-Motion-Picture-Soundtrack-Kannada-2022-20221006134239-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/513/Brahmastra-Kannada-Original-Motion-Picture-Soundtrack-Kannada-2022-20221006134239-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/513/abb962068d2f32f00a4c7d6293940289_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/513/abb962068d2f32f00a4c7d6293940289_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/513/abb962068d2f32f00a4c7d6293940289_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/513/abb962068d2f32f00a4c7d6293940289_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/513/abb962068d2f32f00a4c7d6293940289_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "VpYxfhES",
+          "name": "Kesariya (Piano Lori)",
+          "type": "song",
+          "year": "2024",
+          "releaseDate": null,
+          "duration": 164,
+          "label": "Sony Music Entertainment",
+          "explicitContent": false,
+          "playCount": 8136,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-piano-lori/JhgySRJYcmA",
+          "copyright": "(P) 2024 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "56308499",
+            "name": "Bollywood Instrumentals (Piano Lori)",
+            "url": "https://www.jiosaavn.com/album/bollywood-instrumentals-piano-lori/NxA-nnMCgys_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "19860854",
+                "name": "Bollywood Instrumentals",
+                "role": "primary_artists",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/bollywood-instrumentals-songs/MxnI,iW27V8_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "19860854",
+                "name": "Bollywood Instrumentals",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/bollywood-instrumentals-songs/MxnI,iW27V8_"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/382/Bollywood-Instrumentals-Piano-Lori-Hindi-2024-20240718190258-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/382/Bollywood-Instrumentals-Piano-Lori-Hindi-2024-20240718190258-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/382/Bollywood-Instrumentals-Piano-Lori-Hindi-2024-20240718190258-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/382/6accdf2aaf729edeaa97e147226cd4b4_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/382/6accdf2aaf729edeaa97e147226cd4b4_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/382/6accdf2aaf729edeaa97e147226cd4b4_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/382/6accdf2aaf729edeaa97e147226cd4b4_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/382/6accdf2aaf729edeaa97e147226cd4b4_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "wloBuVzH",
+          "name": "Kesariya (Punjabi Version)",
+          "type": "song",
+          "year": "2022",
+          "releaseDate": null,
+          "duration": 141,
+          "label": "Sony Music Entertainment India Pvt. Ltd.",
+          "explicitContent": false,
+          "playCount": 38367,
+          "language": "punjabi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-punjabi-version/BwQEcwFmTXs",
+          "copyright": "(P) 2022 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "40534183",
+            "name": "Kesariya (Punjabi Version)",
+            "url": "https://www.jiosaavn.com/album/kesariya-punjabi-version/T71aKwTzOW8_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "7736554",
+                "name": "Jai Dhir",
+                "role": "primary_artists",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/jai-dhir-songs/5uFwEzzRtn4_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "7736554",
+                "name": "Jai Dhir",
+                "role": "singer",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/jai-dhir-songs/5uFwEzzRtn4_"
+              },
+              {
+                "id": "14772030",
+                "name": "Pritam &amp; Jai Dhir",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-jai-dhir-songs/qMcQNuNIJjI_"
+              },
+              {
+                "id": "7736554",
+                "name": "Jai Dhir",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/jai-dhir-songs/5uFwEzzRtn4_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              },
+              {
+                "id": "456117",
+                "name": "Amitabh Bachchan",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bachchan-songs/X6Dce0iJ7y0_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/015/Kesariya-Punjabi-Version-Punjabi-2022-20221209132107-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/015/Kesariya-Punjabi-Version-Punjabi-2022-20221209132107-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/015/Kesariya-Punjabi-Version-Punjabi-2022-20221209132107-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/015/d8efdcb8fcb8af6ef0ec94d0fba9822e_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/015/d8efdcb8fcb8af6ef0ec94d0fba9822e_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/015/d8efdcb8fcb8af6ef0ec94d0fba9822e_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/015/d8efdcb8fcb8af6ef0ec94d0fba9822e_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/015/d8efdcb8fcb8af6ef0ec94d0fba9822e_320.mp4"
+            }
+          ]
+        },
+        {
+          "id": "UnIo3V5Q",
+          "name": "Kesariya (Lofi Instrumental)",
+          "type": "song",
+          "year": "2024",
+          "releaseDate": null,
+          "duration": 164,
+          "label": "Sony Music Entertainment",
+          "explicitContent": false,
+          "playCount": 1472,
+          "language": "hindi",
+          "hasLyrics": false,
+          "lyricsId": null,
+          "url": "https://www.jiosaavn.com/song/kesariya-lofi-instrumental/JQYiXkdmAmI",
+          "copyright": "(P) 2024 Sony Music Entertainment India Pvt. Ltd.",
+          "album": {
+            "id": "56309021",
+            "name": "Bollywood Instrumentals (Lofi)",
+            "url": "https://www.jiosaavn.com/album/bollywood-instrumentals-lofi/EoLpB9yp5Uo_"
+          },
+          "artists": {
+            "primary": [
+              {
+                "id": "19860854",
+                "name": "Bollywood Instrumentals",
+                "role": "primary_artists",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/bollywood-instrumentals-songs/MxnI,iW27V8_"
+              }
+            ],
+            "featured": [],
+            "all": [
+              {
+                "id": "456323",
+                "name": "Pritam",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Pritam_Chakraborty-20170711073326_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/pritam-songs/OaFg9HPZgq8_"
+              },
+              {
+                "id": "458681",
+                "name": "Amitabh Bhattacharya",
+                "role": "music",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bhattacharya_003_20241118063351_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_"
+              },
+              {
+                "id": "19860854",
+                "name": "Bollywood Instrumentals",
+                "role": "singer",
+                "image": [],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/bollywood-instrumentals-songs/MxnI,iW27V8_"
+              },
+              {
+                "id": "7736554",
+                "name": "Jai Dhir",
+                "role": "lyricist",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Jai_Dhir_000_20240228103337_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/jai-dhir-songs/5uFwEzzRtn4_"
+              },
+              {
+                "id": "459632",
+                "name": "Ranbir Kapoor",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Ranbir_Kapoor_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/ranbir-kapoor-songs/nqAfNmNB5II_"
+              },
+              {
+                "id": "511658",
+                "name": "Alia Bhatt",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Alia_Bhatt_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/alia-bhatt-songs/,henzzVDXDQ_"
+              },
+              {
+                "id": "456117",
+                "name": "Amitabh Bachchan",
+                "role": "starring",
+                "image": [
+                  {
+                    "quality": "50x50",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_50x50.jpg"
+                  },
+                  {
+                    "quality": "150x150",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_150x150.jpg"
+                  },
+                  {
+                    "quality": "500x500",
+                    "url": "https://c.saavncdn.com/artists/Amitabh_Bachchan_500x500.jpg"
+                  }
+                ],
+                "type": "artist",
+                "url": "https://www.jiosaavn.com/artist/amitabh-bachchan-songs/X6Dce0iJ7y0_"
+              }
+            ]
+          },
+          "image": [
+            {
+              "quality": "50x50",
+              "url": "https://c.saavncdn.com/986/Bollywood-Instrumentals-Lofi-Instrumental-Hindi-2024-20240718191500-50x50.jpg"
+            },
+            {
+              "quality": "150x150",
+              "url": "https://c.saavncdn.com/986/Bollywood-Instrumentals-Lofi-Instrumental-Hindi-2024-20240718191500-150x150.jpg"
+            },
+            {
+              "quality": "500x500",
+              "url": "https://c.saavncdn.com/986/Bollywood-Instrumentals-Lofi-Instrumental-Hindi-2024-20240718191500-500x500.jpg"
+            }
+          ],
+          "downloadUrl": [
+            {
+              "quality": "12kbps",
+              "url": "http://aac.saavncdn.com/986/df53016a9755743e209fb781a4dbfa5a_12.mp4"
+            },
+            {
+              "quality": "48kbps",
+              "url": "http://aac.saavncdn.com/986/df53016a9755743e209fb781a4dbfa5a_48.mp4"
+            },
+            {
+              "quality": "96kbps",
+              "url": "http://aac.saavncdn.com/986/df53016a9755743e209fb781a4dbfa5a_96.mp4"
+            },
+            {
+              "quality": "160kbps",
+              "url": "http://aac.saavncdn.com/986/df53016a9755743e209fb781a4dbfa5a_160.mp4"
+            },
+            {
+              "quality": "320kbps",
+              "url": "http://aac.saavncdn.com/986/df53016a9755743e209fb781a4dbfa5a_320.mp4"
+            }
+          ]
+        }
+      ]
+    }
+  }
