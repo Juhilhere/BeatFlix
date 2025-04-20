@@ -34,6 +34,53 @@
   transform: scale(1.08);
 }
 
+.song-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.song-card:hover .song-controls {
+  opacity: 1;
+}
+
+.play-button, .queue-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--royal-blue), var(--accent-blue));
+  border: 2px solid var(--azure);
+  color: var(--beige);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.queue-button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: linear-gradient(45deg, var(--royal-maroon), var(--dark-maroon));
+}
+
+.play-button:hover, .queue-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, var(--accent-blue), var(--royal-blue));
+}
+
+.queue-button:hover {
+  background: linear-gradient(45deg, var(--dark-maroon), var(--royal-maroon));
+}
+
 .play-button {
   position: absolute;
   top: 50%;
