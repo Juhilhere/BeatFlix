@@ -44,11 +44,7 @@ function App() {
         <header className="app-header">
           <div className="logo">
             <NavLink to="/">
-              <img
-                src="src/assets/Logo.jpg"
-                alt="BeatFlix"
-                className="app-logo"
-              />
+              
               <h1>BeatFlix</h1>
             </NavLink>
           </div>
