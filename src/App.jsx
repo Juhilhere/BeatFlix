@@ -45,7 +45,7 @@ function App() {
           <div className="logo">
             <NavLink to="/">
               <img
-                src="/src/assets/Logo.jpg"
+                src="src/assets/Logo.jpg"
                 alt="BeatFlix"
                 className="app-logo"
               />
