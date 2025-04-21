@@ -25,7 +25,6 @@ const MusicPlayer = ({
     }
   }, [volume]);
 
-  // Handle audio element setup and cleanup
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !song) return;
@@ -48,7 +47,6 @@ const MusicPlayer = ({
     audio.addEventListener("ended", handleEnded);
     audio.addEventListener("error", handleError);
 
-    // Load new audio source
     if (audio.src !== getAudioUrl()) {
       setIsLoading(true);
       audio.src = getAudioUrl();
@@ -64,7 +62,6 @@ const MusicPlayer = ({
     };
   }, [song]);
 
-  // Handle play state changes
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !song) return;
@@ -82,7 +79,6 @@ const MusicPlayer = ({
     }
   }, [isPlaying, song]);
 
-  // Add keyboard controls
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (!song) return;

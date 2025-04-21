@@ -2,13 +2,13 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import SongCard from "../SongCard/SongCard";
+import { API_BASE_URL } from "../../config/constants";
 import "./Search.css";
 
 const Search = ({
   onSelectSong,
   currentSongId,
   isPlaying,
-  fullWidth,
   onToggleLike,
   likedSongs,
 }) => {
@@ -32,31 +32,41 @@ const Search = ({
     return "";
   }, []);
 
-  // Debounce function
   const debounce = (func, wait) => {
     let timeout;
-    return (...args) => {
+    const debouncedFn = (...args) => {
+      const later = () => {
+        timeout = null;
+        func.apply(null, args);
+      };
       clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
+      timeout = setTimeout(later, wait);
     };
+    debouncedFn.cancel = () => clearTimeout(timeout);
+    return debouncedFn;
   };
 
   const fetchSuggestions = useCallback(
     debounce(async (searchQuery) => {
-      if (!searchQuery || searchQuery.length < 2) {
+      if (!searchQuery?.trim() || searchQuery.length < 2) {
         setSuggestions([]);
         return;
       }
 
       try {
         setIsLoadingSuggestions(true);
+        setError(null);
         const response = await axios.get(
-          `https://saavn.dev/api/search/songs?query=${encodeURIComponent(
-            searchQuery
+          `${API_BASE_URL}/search/songs?query=${encodeURIComponent(
+            searchQuery.trim()
           )}&limit=5`
         );
         const results = response.data.data.results;
-        setSuggestions(results);
+        if (Array.isArray(results)) {
+          setSuggestions(results);
+        } else {
+          setSuggestions([]);
+        }
       } catch (err) {
         console.error("Error fetching suggestions:", err);
         setSuggestions([]);
@@ -143,18 +153,29 @@ const Search = ({
       setLoading(true);
       setError(null);
       const response = await axios.get(
-        `https://saavn.dev/api/search/songs?query=${encodeURIComponent(
-          searchQuery
+        `${API_BASE_URL}/search/songs?query=${encodeURIComponent(
+          searchQuery.trim()
         )}`,
         { signal: newController.signal }
       );
-      setSongs(response.data.data.results);
+      const results = response.data.data.results;
+      if (Array.isArray(results)) {
+        setSongs(results);
+      } else {
+        setSongs([]);
+        setError("No songs found matching your search.");
+      }
     } catch (err) {
       if (err.name === "AbortError") {
         console.log("Request cancelled");
       } else {
         console.error("Search error:", err);
-        setError("Failed to search songs. Please try again.");
+        setError(
+          err.response?.status === 429
+            ? "Too many requests. Please try again in a moment."
+            : "Failed to search songs. Please try again."
+        );
+        setSongs([]);
       }
     } finally {
       setLoading(false);
@@ -180,7 +201,6 @@ const Search = ({
     setError(null);
   };
 
-  // Close suggestions when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.target.closest(".search-input-container")) {
@@ -193,15 +213,12 @@ const Search = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Add keyboard shortcut to focus search
   useEffect(() => {
     const handleKeyPress = (e) => {
-      // Ctrl/Cmd + K to focus search
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
         inputRef.current?.focus();
       }
-      // Escape to clear and blur search
       if (e.key === "Escape" && document.activeElement === inputRef.current) {
         handleClearInput();
         inputRef.current?.blur();
@@ -212,8 +229,17 @@ const Search = ({
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (abortController) {
+        abortController.abort();
+      }
+      fetchSuggestions.cancel?.();
+    };
+  }, []);
+
   return (
-    <div className={`search-container ${fullWidth ? "full-width" : ""}`}>
+    <div className="search-container">
       <form onSubmit={handleSubmit} className="search-form">
         <div className="search-input-container">
           <div className="search-input-wrapper">
@@ -321,7 +347,7 @@ const Search = ({
             ))
           : !loading &&
             query && (
-              <p className="no-results" role="status">
+              <p className="no-results" role="alert">
                 {error
                   ? "An error occurred while searching."
                   : "No songs found."}

@@ -14,7 +14,6 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Save liked songs to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("beatflix-liked-songs", JSON.stringify(likedSongs));
   }, [likedSongs]);
@@ -24,7 +23,7 @@ function App() {
       setIsPlaying(!isPlaying);
     } else {
       setCurrentSong(song);
-      setIsPlaying(false); // Don't autoplay when selecting new song
+      setIsPlaying(false);
     }
   };
 
@@ -45,7 +44,11 @@ function App() {
         <header className="app-header">
           <div className="logo">
             <NavLink to="/">
-              <img src="/src/assets/Logo.jpg" alt="BeatFlix" className="app-logo" />
+              <img
+                src="/src/assets/Logo.jpg"
+                alt="BeatFlix"
+                className="app-logo"
+              />
               <h1>BeatFlix</h1>
             </NavLink>
           </div>
@@ -53,7 +56,6 @@ function App() {
             <NavLink to="/" end>
               Home
             </NavLink>
-            <NavLink to="/explore">Explore</NavLink>
             <NavLink to="/liked">Liked Songs</NavLink>
           </nav>
           <div className="search-wrapper">
@@ -80,22 +82,6 @@ function App() {
               }
             />
             <Route
-              path="/explore"
-              element={
-                <div className="explore-page">
-                  <h1>Explore Music</h1>
-                  <Search
-                    onSelectSong={handleSelectSong}
-                    currentSongId={currentSong?.id}
-                    isPlaying={isPlaying}
-                    onToggleLike={handleToggleLike}
-                    likedSongs={likedSongs}
-                    fullWidth
-                  />
-                </div>
-              }
-            />
-            <Route
               path="/liked"
               element={
                 <div className="library-page">
@@ -118,10 +104,7 @@ function App() {
                     <div className="empty-library">
                       <div className="empty-illustration">♫</div>
                       <h2>No Liked Songs Yet</h2>
-                      <p>Songs you like will appear here.</p>
-                      <NavLink to="/explore" className="explore-button">
-                        Explore Music
-                      </NavLink>
+                      <p>Start liking songs and they will appear here.</p>
                     </div>
                   )}
                 </div>

@@ -1,12 +1,66 @@
-# React + Vite
+# BeatFlix - Music Streaming Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern music streaming application built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse trending songs and curated playlists
+- Search for songs with real-time suggestions
+- Like and manage your favorite songs
+- Responsive design for mobile and desktop
+- Modern, intuitive user interface
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js (Functional Components + Hooks)
+- React Router for navigation
+- Custom CSS with modern features
+- Axios for API integration
+- Vite for build tooling
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the root directory:
+   ```
+   VITE_API_BASE_URL=https://saavn.dev/api
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+```
+src/
+  ├── components/         # Reusable components
+  ├── config/            # Configuration files
+  ├── assets/            # Static assets
+  └── App.jsx            # Main application component
+```
+
+## Environment Variables
+
+Create a `.env` file with the following variables:
+
+- `VITE_API_BASE_URL`: Base URL for the Saavn API
+
+## Available Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
+
+## Best Practices
+
+- Modular component structure
+- Custom CSS with modern features
+- Proper error handling
+- Form validation
+- Responsive design
+- Environment variable usage

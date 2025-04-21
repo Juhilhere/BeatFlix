@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SongCard from "../SongCard/SongCard";
+import { API_BASE_URL } from "../../config/constants";
 import "./HomeCategories.css";
 
 const HomeCategories = ({
@@ -36,10 +37,10 @@ const HomeCategories = ({
       setError(null);
 
       const [trending, bollywoodHits, hollywoodSongs] = await Promise.all([
-        axios.get("https://saavn.dev/api/search/songs?query=trending"),
-        axios.get("https://saavn.dev/api/search/songs?query=bollywood hits"),
+        axios.get(`${API_BASE_URL}/search/songs?query=trending`),
+        axios.get(`${API_BASE_URL}/search/songs?query=bollywood hits`),
         axios.get(
-          "https://saavn.dev/api/search/songs?query=taylor swift ed sheeran weeknd"
+          `${API_BASE_URL}/search/songs?query=taylor swift ed sheeran weeknd`
         ),
       ]);
 

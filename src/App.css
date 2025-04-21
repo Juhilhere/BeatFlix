@@ -121,13 +121,13 @@
   overflow: hidden;
 }
 
-.explore-page, .library-page {
+.library-page {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.explore-page h1, .library-page h1 {
+.library-page h1 {
   color: var(--royal-maroon);
   margin-bottom: 30px;
   text-align: center;
@@ -221,22 +221,6 @@
   margin-bottom: 24px;
   line-height: 1.5;
   font-family: Georgia, 'Times New Roman', serif;
-}
-
-.explore-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: linear-gradient(45deg, var(--royal-blue), var(--accent-blue));
-  color: var(--beige);
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.explore-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .read-the-docs {
