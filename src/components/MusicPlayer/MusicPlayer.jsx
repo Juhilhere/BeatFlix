@@ -3,70 +3,101 @@ import "./MusicPlayer.css";
 
 const MusicPlayer = ({
   song,
-  onNext,
-  onPrevious,
-  hasNext,
-  hasPrevious,
-  queue,
-  currentQueueIndex,
+  isPlaying,
+  setIsPlaying,
+  onToggleLike,
+  isLiked,
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [showQueue, setShowQueue] = useState(false);
+  const [volume, setVolume] = useState(() => {
+    const savedVolume = localStorage.getItem("beatflix-volume");
+    return savedVolume ? parseFloat(savedVolume) : 1;
+  });
+  const [isLoading, setIsLoading] = useState(false);
   const audioRef = useRef(null);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    // Reset player when song changes
-    if (song) {
-      setIsPlaying(false);
-      setCurrentTime(0);
-      const audio = audioRef.current;
-      if (audio) {
-        audio.load();
-        audio.play().then(() => setIsPlaying(true));
-      }
+    localStorage.setItem("beatflix-volume", volume.toString());
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
     }
-  }, [song]);
+  }, [volume]);
 
+  // Handle audio element setup and cleanup
   useEffect(() => {
     const audio = audioRef.current;
-
     if (!audio || !song) return;
 
     const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
     const handleLoadedMetadata = () => setDuration(audio.duration);
     const handleEnded = () => {
-      if (hasNext) {
-        onNext();
-      } else {
-        setIsPlaying(false);
-      }
+      setIsPlaying(false);
+      audio.currentTime = 0;
+    };
+
+    const handleError = (e) => {
+      console.error("Audio playback error:", e);
+      setIsPlaying(false);
+      setIsLoading(false);
     };
 
     audio.addEventListener("timeupdate", handleTimeUpdate);
     audio.addEventListener("loadedmetadata", handleLoadedMetadata);
     audio.addEventListener("ended", handleEnded);
+    audio.addEventListener("error", handleError);
+
+    // Load new audio source
+    if (audio.src !== getAudioUrl()) {
+      setIsLoading(true);
+      audio.src = getAudioUrl();
+      audio.load();
+      setIsLoading(false);
+    }
 
     return () => {
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
       audio.removeEventListener("ended", handleEnded);
+      audio.removeEventListener("error", handleError);
     };
-  }, [song, hasNext, onNext]);
+  }, [song]);
 
-  const togglePlayPause = () => {
+  // Handle play state changes
+  useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !song) return;
 
     if (isPlaying) {
-      audio.pause();
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.error("Playback error:", error);
+          setIsPlaying(false);
+        });
+      }
     } else {
-      audio.play();
+      audio.pause();
     }
+  }, [isPlaying, song]);
 
-    setIsPlaying(!isPlaying);
-  };
+  // Add keyboard controls
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (!song) return;
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")
+        return;
+
+      if (e.code === "Space") {
+        e.preventDefault();
+        setIsPlaying(!isPlaying);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [song, isPlaying, setIsPlaying]);
 
   const handleSeek = (e) => {
     const audio = audioRef.current;
@@ -75,6 +106,15 @@ const MusicPlayer = ({
     const seekTime = (e.target.value / 100) * duration;
     audio.currentTime = seekTime;
     setCurrentTime(seekTime);
+  };
+
+  const handleVolumeChange = (e) => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const newVolume = parseFloat(e.target.value);
+    audio.volume = newVolume;
+    setVolume(newVolume);
   };
 
   const formatTime = (time) => {
@@ -107,11 +147,15 @@ const MusicPlayer = ({
           <img
             src={
               song.image && song.image.length > 0
-                ? song.image[1]?.url
+                ? song.image[1]?.url || song.image[0]?.url
                 : "https://via.placeholder.com/50"
             }
             alt={song.name}
             className="player-thumbnail"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "https://via.placeholder.com/50";
+            }}
           />
           <div className="player-info">
             <h4 className="player-title">{song.name}</h4>
@@ -121,29 +165,27 @@ const MusicPlayer = ({
                 : "Unknown Artist"}
             </p>
           </div>
+          <button
+            className={`player-like-button ${isLiked ? "liked" : ""}`}
+            onClick={() => onToggleLike(song)}
+            aria-label={
+              isLiked ? "Remove from liked songs" : "Add to liked songs"
+            }
+          >
+            {isLiked ? "♥" : "♡"}
+          </button>
         </div>
 
         <div className="player-center">
           <div className="player-controls">
             <button
-              className="control-button skip-prev"
-              onClick={onPrevious}
-              disabled={!hasPrevious}
+              className={`control-button play-pause ${
+                isLoading ? "loading" : ""
+              }`}
+              onClick={() => setIsPlaying(!isPlaying)}
+              disabled={isLoading}
             >
-              ⏮
-            </button>
-            <button
-              className="control-button play-pause"
-              onClick={togglePlayPause}
-            >
-              {isPlaying ? "❚❚" : "▶"}
-            </button>
-            <button
-              className="control-button skip-next"
-              onClick={onNext}
-              disabled={!hasNext}
-            >
-              ⏭
+              {isLoading ? "⌛" : isPlaying ? "❚❚" : "▶"}
             </button>
           </div>
 
@@ -162,50 +204,25 @@ const MusicPlayer = ({
         </div>
 
         <div className="player-right">
-          <button
-            className={`control-button queue-toggle ${
-              showQueue ? "active" : ""
-            }`}
-            onClick={() => setShowQueue(!showQueue)}
-            title="Show queue"
-          >
-            🎵
-          </button>
+          <div className="volume-control">
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={volume}
+              onChange={handleVolumeChange}
+              className="volume-slider"
+            />
+          </div>
         </div>
       </div>
 
-      {showQueue && (
-        <div className="queue-panel">
-          <h3>Up Next</h3>
-          <div className="queue-list">
-            {queue.map((queuedSong, index) => (
-              <div
-                key={`${queuedSong.id}-${index}`}
-                className={`queue-item ${
-                  index === currentQueueIndex ? "active" : ""
-                }`}
-              >
-                <img
-                  src={
-                    queuedSong.image && queuedSong.image.length > 0
-                      ? queuedSong.image[0]?.url
-                      : "https://via.placeholder.com/32"
-                  }
-                  alt={queuedSong.name}
-                />
-                <div className="queue-item-info">
-                  <span className="queue-item-title">{queuedSong.name}</span>
-                  <span className="queue-item-artist">
-                    {queuedSong.artists?.primary?.[0]?.name || "Unknown Artist"}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <audio ref={audioRef} src={getAudioUrl()} />
+      <audio
+        ref={audioRef}
+        preload="auto"
+        onError={(e) => console.error("Audio error:", e)}
+      />
     </div>
   );
 };

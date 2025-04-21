@@ -1,25 +1,28 @@
 .home-categories {
-  padding: 20px;
+  padding: 2rem;
   width: 100%;
 }
 
 .category-section {
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 
 .category-title {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--royal-maroon);
-  margin-bottom: 20px;
-  padding-left: 10px;
+  margin-bottom: 1rem;
+  padding-left: 15px;
   border-left: 4px solid var(--royal-blue);
+  font-family: Georgia, 'Times New Roman', serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
 
 .category-songs {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
   padding: 10px 0;
   scrollbar-width: thin;
   scrollbar-color: var(--royal-blue) transparent;
@@ -38,20 +41,185 @@
   border-radius: 10px;
 }
 
-.loading, .error {
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-category {
+  width: 100%;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading-title {
+  width: 200px;
+  height: 24px;
+  background: linear-gradient(90deg, 
+    var(--royal-maroon) 0%,
+    var(--dark-maroon) 50%,
+    var(--royal-maroon) 100%
+  );
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  animation: shimmer 2s infinite;
+  background-size: 200% 100%;
+}
+
+.loading-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 10px 0;
+}
+
+.loading-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 280px;
+  position: relative;
+  animation: cardPulse 2s infinite;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.loading-image {
+  width: 100%;
+  padding-top: 100%;
+  background: linear-gradient(90deg, 
+    var(--royal-maroon) 0%,
+    var(--dark-maroon) 50%,
+    var(--royal-maroon) 100%
+  );
+  animation: shimmer 2s infinite;
+  background-size: 200% 100%;
+}
+
+.loading-content {
+  padding: 15px;
+}
+
+.loading-text {
+  height: 14px;
+  background: linear-gradient(90deg, 
+    var(--royal-maroon) 0%,
+    var(--dark-maroon) 50%,
+    var(--royal-maroon) 100%
+  );
+  border-radius: 2px;
+  margin-bottom: 10px;
+  animation: shimmer 2s infinite;
+  background-size: 200% 100%;
+}
+
+.loading-text:last-child {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes cardPulse {
+  0% {
+    transform: translateZ(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateZ(10px) scale(1.02);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateZ(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error State */
+.error-state {
   text-align: center;
-  padding: 40px;
-  font-size: 18px;
-  color: var(--royal-maroon);
+  padding: 2rem;
+  color: #ff4444;
 }
 
-.error {
-  color: #dc3545;
+.error-message {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
+.retry-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background: #45a049;
+}
+
+.retry-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.4);
+}
+
+/* Empty State */
+.no-songs {
+  color: #999;
+  text-align: center;
+  padding: 2rem;
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .home-categories {
-    padding: 10px;
+    padding: 1rem;
   }
 
   .category-title {
@@ -61,5 +229,9 @@
 
   .category-section {
     margin-bottom: 30px;
+  }
+
+  .category-songs {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }

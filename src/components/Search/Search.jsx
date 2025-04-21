@@ -1,269 +1,330 @@
-import { useState } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import SongCard from "../SongCard/SongCard";
 import "./Search.css";
 
-const Search = ({ onSelectSong, onAddToQueue, fullWidth }) => {
+const Search = ({
+  onSelectSong,
+  currentSongId,
+  isPlaying,
+  fullWidth,
+  onToggleLike,
+  likedSongs,
+}) => {
   const [query, setQuery] = useState("");
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [touched, setTouched] = useState(false);
   const [validationError, setValidationError] = useState("");
+  const [abortController, setAbortController] = useState(null);
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
+  const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false);
+  const inputRef = useRef(null);
+  const navigate = useNavigate();
 
-  const validateQuery = (value) => {
-    if (!value.trim()) {
-      return "Search query cannot be empty";
-    }
-    if (value.length < 2) {
-      return "Search query must be at least 2 characters";
-    }
-    if (value.length > 50) {
-      return "Search query cannot exceed 50 characters";
-    }
+  const validateQuery = useCallback((value) => {
+    if (!value.trim()) return "Search query cannot be empty";
+    if (value.length < 2) return "Search query must be at least 2 characters";
+    if (value.length > 50) return "Search query cannot exceed 50 characters";
     return "";
+  }, []);
+
+  // Debounce function
+  const debounce = (func, wait) => {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
   };
+
+  const fetchSuggestions = useCallback(
+    debounce(async (searchQuery) => {
+      if (!searchQuery || searchQuery.length < 2) {
+        setSuggestions([]);
+        return;
+      }
+
+      try {
+        setIsLoadingSuggestions(true);
+        const response = await axios.get(
+          `https://saavn.dev/api/search/songs?query=${encodeURIComponent(
+            searchQuery
+          )}&limit=5`
+        );
+        const results = response.data.data.results;
+        setSuggestions(results);
+      } catch (err) {
+        console.error("Error fetching suggestions:", err);
+        setSuggestions([]);
+      } finally {
+        setIsLoadingSuggestions(false);
+      }
+    }, 300),
+    []
+  );
 
   const handleInputChange = (e) => {
     const value = e.target.value;
     setQuery(value);
-    if (touched) {
-      setValidationError(validateQuery(value));
-    }
-  };
-
-  const handleInputBlur = () => {
-    setTouched(true);
-    setValidationError(validateQuery(query));
-  };
-
-  const removeDuplicateSongs = (songList) => {
-    const uniqueSongs = new Map();
-    songList.forEach((song) => {
-      const primaryArtist = song.artists?.primary?.[0]?.name || "Unknown";
-      const key = `${song.name.toLowerCase()}-${primaryArtist.toLowerCase()}`;
-      if (!uniqueSongs.has(key)) {
-        uniqueSongs.set(key, song);
-      }
-    });
-    return Array.from(uniqueSongs.values());
-  };
-
-  const searchSongs = async (searchQuery) => {
-    try {
-      const [songsResponse, artistsResponse] = await Promise.all([
-        // Search specifically for songs with the query
-        axios.get(
-          `https://saavn.dev/api/search/songs?query=${encodeURIComponent(
-            searchQuery
-          )}&limit=15`
-        ),
-        // Search for artists to get their songs
-        axios.get(
-          `https://saavn.dev/api/search/artists?query=${encodeURIComponent(
-            searchQuery
-          )}&limit=3`
-        ),
-      ]);
-
-      let allSongs = [];
-      let verifiedArtists = new Set(); // Keep track of verified/popular artists
-
-      // First, identify verified/popular artists from the artist search
-      if (artistsResponse.data?.data?.results) {
-        const artists = artistsResponse.data.data.results;
-        for (const artist of artists) {
-          // Add artists with profile images as verified (these are typically more popular/official artists)
-          if (artist.image && artist.image.length > 0) {
-            verifiedArtists.add(artist.name.toLowerCase());
-          }
-
-          if (artist.id) {
-            try {
-              const artistSongs = await axios.get(
-                `https://saavn.dev/api/artists/${artist.id}/songs?limit=5`
-              );
-              if (artistSongs.data?.data?.results) {
-                allSongs = [...allSongs, ...artistSongs.data.data.results];
-              }
-            } catch (error) {
-              console.error("Error fetching artist songs:", error);
-            }
-          }
-        }
-      }
-
-      // Add direct song search results
-      if (songsResponse.data?.data?.results) {
-        allSongs = [...allSongs, ...songsResponse.data.data.results];
-      }
-
-      // Filter and sort results by relevance
-      const uniqueSongs = removeDuplicateSongs(allSongs);
-      const searchLower = searchQuery.toLowerCase();
-      const searchTerms = searchLower
-        .split(" ")
-        .filter((term) => term.length > 1);
-
-      const sortedSongs = uniqueSongs.sort((a, b) => {
-        const aTitle = a.name.toLowerCase();
-        const bTitle = b.name.toLowerCase();
-        const aArtist = a.artists?.primary?.[0]?.name?.toLowerCase() || "";
-        const bArtist = b.artists?.primary?.[0]?.name?.toLowerCase() || "";
-
-        // Calculate relevance scores
-        const scoreA = calculateRelevanceScore(
-          aTitle,
-          aArtist,
-          searchLower,
-          searchTerms,
-          verifiedArtists
-        );
-        const scoreB = calculateRelevanceScore(
-          bTitle,
-          bArtist,
-          searchLower,
-          searchTerms,
-          verifiedArtists
-        );
-
-        return scoreB - scoreA; // Higher score first
-      });
-
-      return sortedSongs;
-    } catch (error) {
-      throw error;
-    }
-  };
-
-  const calculateRelevanceScore = (
-    title,
-    artist,
-    searchQuery,
-    searchTerms,
-    verifiedArtists
-  ) => {
-    let score = 0;
-
-    // Exact title match gets highest priority
-    if (title === searchQuery) score += 100;
-
-    // Title starts with search query
-    if (title.startsWith(searchQuery)) score += 80;
-
-    // Title contains the exact search query
-    if (title.includes(searchQuery)) score += 60;
-
-    // Verified artist bonus
-    if (verifiedArtists.has(artist)) score += 40;
-
-    // Exact artist name match
-    if (artist === searchQuery) score += 30;
-
-    // Artist name contains search query
-    if (artist.includes(searchQuery)) score += 20;
-
-    // Partial matches for each search term
-    searchTerms.forEach((term) => {
-      if (title.includes(term)) score += 10;
-      if (artist.includes(term)) score += 5;
-    });
-
-    // Bonus for shorter, more precise matches
-    if (title.length < searchQuery.length * 2) score += 5;
-
-    // Penalty for very long titles that might be remixes/covers
-    if (
-      title.includes("remix") ||
-      title.includes("cover") ||
-      title.includes("version")
-    ) {
-      score -= 15;
-    }
-
-    return score;
-  };
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    const error = validateQuery(query);
-    setTouched(true);
+    const error = validateQuery(value);
     setValidationError(error);
+    setSelectedSuggestionIndex(-1);
 
-    if (error) return;
+    if (!error && value.length >= 2) {
+      fetchSuggestions(value);
+      setShowSuggestions(true);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
 
-    setLoading(true);
-    setError(null);
+  const handleKeyDown = (e) => {
+    if (!showSuggestions || suggestions.length === 0) return;
+
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setSelectedSuggestionIndex((prev) =>
+          prev < suggestions.length - 1 ? prev + 1 : 0
+        );
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setSelectedSuggestionIndex((prev) =>
+          prev > 0 ? prev - 1 : suggestions.length - 1
+        );
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (selectedSuggestionIndex >= 0) {
+          handleSuggestionClick(suggestions[selectedSuggestionIndex]);
+        }
+        break;
+      case "Escape":
+        setShowSuggestions(false);
+        setSelectedSuggestionIndex(-1);
+        inputRef.current?.blur();
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSuggestionClick = (song) => {
+    setQuery(song.name);
+    setSuggestions([]);
+    setShowSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+    performSearch(song.name);
+  };
+
+  const handleClearInput = () => {
+    setQuery("");
+    setSuggestions([]);
+    setShowSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+    inputRef.current?.focus();
+  };
+
+  const performSearch = async (searchQuery) => {
+    if (abortController) {
+      abortController.abort();
+    }
+
+    const newController = new AbortController();
+    setAbortController(newController);
 
     try {
-      const searchResults = await searchSongs(query.trim());
-      setSongs(searchResults);
+      setLoading(true);
+      setError(null);
+      const response = await axios.get(
+        `https://saavn.dev/api/search/songs?query=${encodeURIComponent(
+          searchQuery
+        )}`,
+        { signal: newController.signal }
+      );
+      setSongs(response.data.data.results);
     } catch (err) {
-      console.error("Error fetching songs:", err);
-      setError("Failed to fetch songs. Please try again.");
+      if (err.name === "AbortError") {
+        console.log("Request cancelled");
+      } else {
+        console.error("Search error:", err);
+        setError("Failed to search songs. Please try again.");
+      }
     } finally {
       setLoading(false);
+      setAbortController(null);
     }
   };
 
-  const handleSongSelect = (song) => {
-    if (onSelectSong) {
-      onSelectSong(song);
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const error = validateQuery(query);
+    setValidationError(error);
+    if (error) return;
+
+    setShowSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+    performSearch(query);
   };
+
+  const handleBackToHome = () => {
+    navigate("/");
+    setQuery("");
+    setSongs([]);
+    setError(null);
+  };
+
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest(".search-input-container")) {
+        setShowSuggestions(false);
+        setSelectedSuggestionIndex(-1);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Add keyboard shortcut to focus search
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      // Ctrl/Cmd + K to focus search
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+      // Escape to clear and blur search
+      if (e.key === "Escape" && document.activeElement === inputRef.current) {
+        handleClearInput();
+        inputRef.current?.blur();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, []);
 
   return (
     <div className={`search-container ${fullWidth ? "full-width" : ""}`}>
-      <form onSubmit={handleSearch} className="search-form">
-        <div className="search-input-wrapper">
-          <input
-            type="text"
-            value={query}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            placeholder="Search for songs or artists..."
-            className={`search-input ${
-              validationError && touched ? "error" : ""
-            }`}
-            aria-label="Search query"
-            aria-invalid={!!validationError}
-            aria-describedby={validationError ? "search-error" : undefined}
-          />
-          <button
-            type="submit"
-            className="search-button"
-            disabled={!!validationError || loading}
-          >
-            {loading ? "Searching..." : "Search"}
-          </button>
-        </div>
-        {validationError && touched && (
-          <div className="validation-error" id="search-error" role="alert">
-            {validationError}
+      <form onSubmit={handleSubmit} className="search-form">
+        <div className="search-input-container">
+          <div className="search-input-wrapper">
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              onFocus={() => query.length >= 2 && setShowSuggestions(true)}
+              placeholder="Search for songs... (Ctrl + K)"
+              className={`search-input ${validationError ? "error" : ""}`}
+              autoComplete="off"
+            />
+            {query && !isLoadingSuggestions && (
+              <button
+                type="button"
+                className="search-clear-button"
+                onClick={handleClearInput}
+                aria-label="Clear search"
+              >
+                ×
+              </button>
+            )}
+            {isLoadingSuggestions && (
+              <div className="search-input-loading" role="status">
+                <span className="sr-only">Loading suggestions...</span>
+              </div>
+            )}
+            {validationError && (
+              <p className="validation-error" role="alert">
+                {validationError}
+              </p>
+            )}
           </div>
-        )}
+          {showSuggestions && suggestions.length > 0 && (
+            <div className="search-suggestions">
+              {suggestions.map((song, index) => (
+                <div
+                  key={song.id}
+                  className={`suggestion-item ${
+                    index === selectedSuggestionIndex ? "selected" : ""
+                  }`}
+                  onClick={() => handleSuggestionClick(song)}
+                  onMouseEnter={() => setSelectedSuggestionIndex(index)}
+                >
+                  <img
+                    src={
+                      song.image?.[0]?.url || "https://via.placeholder.com/40"
+                    }
+                    alt={song.name}
+                    className="suggestion-image"
+                  />
+                  <div className="suggestion-info">
+                    <span className="suggestion-title">{song.name}</span>
+                    <span className="suggestion-artist">
+                      {song.artists?.primary?.[0]?.name || "Unknown Artist"}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <button
+          type="submit"
+          className="search-button"
+          disabled={loading || !!validationError}
+        >
+          {loading ? "Searching..." : "Search"}
+        </button>
       </form>
 
-      {loading && <p className="search-status">Loading...</p>}
       {error && (
         <p className="search-error" role="alert">
           {error}
         </p>
       )}
 
+      {(songs.length > 0 || (!loading && query)) && (
+        <div className="search-results-header">
+          <button onClick={handleBackToHome} className="back-button">
+            ← Back to Home
+          </button>
+          {songs.length > 0 && (
+            <p className="results-count">
+              {songs.length} {songs.length === 1 ? "song" : "songs"} found
+            </p>
+          )}
+        </div>
+      )}
+
       <div className="songs-container">
         {songs.length > 0
           ? songs.map((song) => (
               <SongCard
-                key={song.id}
+                key={`${song.id}-${song.name}`}
                 song={song}
-                onSelect={() => handleSongSelect(song)}
-                onAddToQueue={onAddToQueue}
+                onSelect={() => onSelectSong(song)}
+                isCurrentSong={song.id === currentSongId}
+                isPlaying={song.id === currentSongId && isPlaying}
+                onToggleLike={onToggleLike}
+                isLiked={likedSongs?.some((s) => s.id === song.id)}
               />
             ))
-          : !loading && (
-              <p className="no-results">
-                ✧ No melodies found for your search. Try a different tune... ✧
+          : !loading &&
+            query && (
+              <p className="no-results" role="status">
+                {error
+                  ? "An error occurred while searching."
+                  : "No songs found."}
               </p>
             )}
       </div>

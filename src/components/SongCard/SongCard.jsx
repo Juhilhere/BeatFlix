@@ -1,78 +1,104 @@
 import React, { useState } from "react";
 import "./SongCard.css";
 
-const SongCard = ({ song, onSelect, onAddToQueue }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+const SongCard = ({
+  song,
+  onSelect,
+  isCurrentSong,
+  isPlaying,
+  onToggleLike,
+  isLiked,
+}) => {
+  const [imageError, setImageError] = useState(false);
 
-  // Function to format duration from seconds to MM:SS format
   const formatDuration = (seconds) => {
+    if (!seconds || isNaN(seconds)) return "0:00";
     const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
+    const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
   };
 
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
+  const handlePlayPause = (e) => {
+    e.stopPropagation();
     if (onSelect) {
       onSelect(song);
     }
   };
 
-  const handleAddToQueue = (e) => {
+  const handleCardClick = (e) => {
+    if (
+      !e.target.closest(".play-button") &&
+      !e.target.closest(".like-button")
+    ) {
+      handlePlayPause(e);
+    }
+  };
+
+  const handleLikeClick = (e) => {
     e.stopPropagation();
-    if (onAddToQueue) {
-      onAddToQueue(song);
+    if (onToggleLike) {
+      onToggleLike(song);
     }
   };
 
-  // Find highest quality image
   const getImageUrl = () => {
-    if (!song.image || song.image.length === 0) {
-      return "https://via.placeholder.com/150"; // Default placeholder if no image
+    if (
+      imageError ||
+      !song.image ||
+      !Array.isArray(song.image) ||
+      song.image.length === 0
+    ) {
+      return "https://via.placeholder.com/150";
     }
-
-    // Find the highest quality image or use the first one
     const highQualityImage = song.image.find(
-      (img) => img.quality === "500x500"
+      (img) => img.quality === "500x500" && img.url
     );
-    return highQualityImage ? highQualityImage.url : song.image[0].url;
+    return (
+      highQualityImage?.url ||
+      song.image[0]?.url ||
+      "https://via.placeholder.com/150"
+    );
   };
 
-  // Get best quality audio URL
-  const getAudioUrl = () => {
-    if (!song.downloadUrl || song.downloadUrl.length === 0) {
-      return null;
-    }
-
-    // Get the highest quality audio available
-    const sortedDownloadOptions = [...song.downloadUrl].sort((a, b) => {
-      const qualityA = parseInt(a.quality.replace(/[^\d]/g, ""));
-      const qualityB = parseInt(b.quality.replace(/[^\d]/g, ""));
-      return qualityB - qualityA; // Sort in descending order of quality
-    });
-
-    return sortedDownloadOptions[0].url;
+  const handleImageError = () => {
+    setImageError(true);
   };
 
   return (
-    <div className="song-card">
+    <div
+      className={`song-card ${isCurrentSong ? "current" : ""}`}
+      onClick={handleCardClick}
+      role="button"
+      tabIndex={0}
+    >
       <div className="song-image-container">
-        <img src={getImageUrl()} alt={song.name} className="song-image" />
+        <img
+          src={getImageUrl()}
+          alt={song.name}
+          className="song-image"
+          onError={handleImageError}
+        />
         <div className="song-controls">
           <button
             className={`play-button ${isPlaying ? "playing" : ""}`}
             onClick={handlePlayPause}
+            aria-label={isPlaying ? "Pause" : "Play"}
           >
             {isPlaying ? "❚❚" : "▶"}
           </button>
-          <button
-            className="queue-button"
-            onClick={handleAddToQueue}
-            title="Add to queue"
-          >
-            +
-          </button>
         </div>
+        <button
+          className={`like-button ${isLiked ? "liked" : ""}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleLikeClick(e);
+          }}
+          aria-label={
+            isLiked ? "Remove from liked songs" : "Add to liked songs"
+          }
+        >
+          {isLiked ? "♥" : "♡"}
+        </button>
       </div>
 
       <div className="song-info">
@@ -83,11 +109,8 @@ const SongCard = ({ song, onSelect, onAddToQueue }) => {
             : "Unknown Artist"}
         </p>
         <p className="song-album">{song.album ? song.album.name : ""}</p>
-        <p className="song-duration">{formatDuration(song.duration || 0)}</p>
+        <p className="song-duration">{formatDuration(song.duration)}</p>
       </div>
-
-      {/* Hidden audio element for playing the song */}
-      {getAudioUrl() && <audio src={getAudioUrl()} id={`audio-${song.id}`} />}
     </div>
   );
 };

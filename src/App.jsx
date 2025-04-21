@@ -1,46 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import "./App.css";
 import Search from "./components/Search/Search";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import HomeCategories from "./components/HomeCategories/HomeCategories";
+import SongCard from "./components/SongCard/SongCard";
 
 function App() {
   const [currentSong, setCurrentSong] = useState(null);
-  const [queue, setQueue] = useState([]);
-  const [queueIndex, setQueueIndex] = useState(-1);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [likedSongs, setLikedSongs] = useState(() => {
+    const saved = localStorage.getItem("beatflix-liked-songs");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Save liked songs to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("beatflix-liked-songs", JSON.stringify(likedSongs));
+  }, [likedSongs]);
 
   const handleSelectSong = (song) => {
-    setCurrentSong(song);
-    setQueue([song]);
-    setQueueIndex(0);
-  };
-
-  const addToQueue = (song) => {
-    setQueue((prevQueue) => [...prevQueue, song]);
-  };
-
-  const playNext = () => {
-    if (queueIndex < queue.length - 1) {
-      setQueueIndex((prev) => prev + 1);
-      setCurrentSong(queue[queueIndex + 1]);
-      return true;
+    if (currentSong?.id === song.id) {
+      setIsPlaying(!isPlaying);
+    } else {
+      setCurrentSong(song);
+      setIsPlaying(false); // Don't autoplay when selecting new song
     }
-    return false;
   };
 
-  const playPrevious = () => {
-    if (queueIndex > 0) {
-      setQueueIndex((prev) => prev - 1);
-      setCurrentSong(queue[queueIndex - 1]);
-      return true;
-    }
-    return false;
-  };
-
-  const handleQueueItemClick = (index) => {
-    setQueueIndex(index);
-    setCurrentSong(queue[index]);
+  const handleToggleLike = (song) => {
+    setLikedSongs((prev) => {
+      const isLiked = prev.some((s) => s.id === song.id);
+      if (isLiked) {
+        return prev.filter((s) => s.id !== song.id);
+      } else {
+        return [...prev, song];
+      }
+    });
   };
 
   return (
@@ -49,17 +45,23 @@ function App() {
         <header className="app-header">
           <div className="logo">
             <NavLink to="/">
-              <img src="/vite.svg" alt="BeatFlix" className="app-logo" />
+              <img src="/src/assets/Logo.jpg" alt="BeatFlix" className="app-logo" />
               <h1>BeatFlix</h1>
             </NavLink>
           </div>
           <nav className="nav-links">
-            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/" end>
+              Home
+            </NavLink>
             <NavLink to="/explore">Explore</NavLink>
-            <NavLink to="/library">Library</NavLink>
+            <NavLink to="/liked">Liked Songs</NavLink>
           </nav>
           <div className="search-wrapper">
-            <Search onSelectSong={handleSelectSong} onAddToQueue={addToQueue} />
+            <Search
+              onSelectSong={handleSelectSong}
+              currentSongId={currentSong?.id}
+              isPlaying={isPlaying}
+            />
           </div>
         </header>
 
@@ -70,7 +72,10 @@ function App() {
               element={
                 <HomeCategories
                   onSelectSong={handleSelectSong}
-                  onAddToQueue={addToQueue}
+                  currentSongId={currentSong?.id}
+                  isPlaying={isPlaying}
+                  onToggleLike={handleToggleLike}
+                  likedSongs={likedSongs}
                 />
               }
             />
@@ -79,48 +84,41 @@ function App() {
               element={
                 <div className="explore-page">
                   <h1>Explore Music</h1>
-                  <Search onSelectSong={handleSelectSong} onAddToQueue={addToQueue} fullWidth />
+                  <Search
+                    onSelectSong={handleSelectSong}
+                    currentSongId={currentSong?.id}
+                    isPlaying={isPlaying}
+                    onToggleLike={handleToggleLike}
+                    likedSongs={likedSongs}
+                    fullWidth
+                  />
                 </div>
               }
             />
             <Route
-              path="/library"
+              path="/liked"
               element={
                 <div className="library-page">
-                  <h1>Your Library</h1>
-                  {queue.length > 0 ? (
-                    <div className="queue-list">
-                      {queue.map((song, index) => (
-                        <div
-                          key={`${song.id}-${index}`}
-                          className={`queue-item ${index === queueIndex ? 'active' : ''}`}
-                          onClick={() => handleQueueItemClick(index)}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              handleQueueItemClick(index);
-                            }
-                          }}
-                        >
-                          <img
-                            src={song.image?.[0]?.url || "https://via.placeholder.com/50"}
-                            alt={song.name}
-                          />
-                          <div className="song-info">
-                            <h3>{song.name}</h3>
-                            <p>
-                              {song.artists?.primary?.[0]?.name || "Unknown Artist"}
-                            </p>
-                          </div>
-                        </div>
+                  <h1>Liked Songs</h1>
+                  {likedSongs.length > 0 ? (
+                    <div className="songs-grid">
+                      {likedSongs.map((song) => (
+                        <SongCard
+                          key={song.id}
+                          song={song}
+                          onSelect={handleSelectSong}
+                          isCurrentSong={currentSong?.id === song.id}
+                          isPlaying={currentSong?.id === song.id && isPlaying}
+                          onToggleLike={handleToggleLike}
+                          isLiked={true}
+                        />
                       ))}
                     </div>
                   ) : (
                     <div className="empty-library">
-                      <div className="empty-illustration">🎵</div>
-                      <h2>Your Library is Empty</h2>
-                      <p>Start adding songs to your library by clicking the + button on any song</p>
+                      <div className="empty-illustration">♫</div>
+                      <h2>No Liked Songs Yet</h2>
+                      <p>Songs you like will appear here.</p>
                       <NavLink to="/explore" className="explore-button">
                         Explore Music
                       </NavLink>
@@ -135,12 +133,10 @@ function App() {
         {currentSong && (
           <MusicPlayer
             song={currentSong}
-            onNext={playNext}
-            onPrevious={playPrevious}
-            hasNext={queueIndex < queue.length - 1}
-            hasPrevious={queueIndex > 0}
-            queue={queue}
-            currentQueueIndex={queueIndex}
+            isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+            onToggleLike={handleToggleLike}
+            isLiked={likedSongs.some((s) => s.id === currentSong.id)}
           />
         )}
       </div>
